@@ -1,0 +1,11 @@
+{
+  "tasks": [],
+  "users": [
+    {
+      "id": 1770740893074,
+      "email": "test@example.com",
+      "password": "$2b$10$REz/s3xlttk2fXHuSRxiAu0NVKQ6x.Aqk8ozHpV/YCXdqg8WBLHCi",
+      "name": "Test User"
+    }
+  ]
+}

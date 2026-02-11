@@ -1,0 +1,6 @@
+/* Cleaned up boilerplate CSS to prevent layout breaks */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

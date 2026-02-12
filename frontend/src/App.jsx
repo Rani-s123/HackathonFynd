@@ -29,6 +29,12 @@ const API_BASE_URL = import.meta.env.VITE_API_URL
   ? `${import.meta.env.VITE_API_URL}/api`
   : 'http://localhost:5000/api';
 
+// Debug logging - remove after verification
+console.log('🔧 Environment Check:');
+console.log('VITE_API_URL:', import.meta.env.VITE_API_URL);
+console.log('Final API_BASE_URL:', API_BASE_URL);
+
+
 function App() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
   const [token, setToken] = useState(localStorage.getItem('token') || null);

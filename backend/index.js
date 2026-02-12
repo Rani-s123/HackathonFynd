@@ -20,6 +20,17 @@ mongoose.connect(MONGODB_URI)
     .then(() => console.log('Connected to MongoDB Atlas'))
     .catch(err => console.error('MongoDB Connection Error:', err));
 
+// Health check endpoint (helps keep Render instance alive)
+app.get('/api/health', (req, res) => {
+    res.json({
+        status: 'OK',
+        timestamp: new Date().toISOString(),
+        service: 'TaskPulse Backend',
+        mongodb: mongoose.connection.readyState === 1 ? 'Connected' : 'Disconnected'
+    });
+});
+
+
 // Workspace Schema (Optional for now, we'll use workspaceName in User)
 const userSchema = new mongoose.Schema({
     name: String,
